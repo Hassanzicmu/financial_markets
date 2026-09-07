@@ -1,0 +1,29 @@
+{
+  "@@locale": "en",
+  "marketRates": "Financial Markets",
+  "@marketRates": {
+    "description": "The title of the app"
+  },
+  "home": "Home",
+  "aboutApp": "About App",
+  "copyright": "Copyright",
+  "settings": "Settings",
+  "faq": "FAQ",
+  "support": "Support",
+  "welcomeTitle": "Welcome to Financial Markets",
+  "welcomeSubtitle": "Track global currencies, cryptocurrencies, and precious metals in real-time with confidence.",
+  "marketSnapshot": "Market Snapshot",
+  "trendingUp": "Trending ↑",
+  "selectMarket": "Select a Market",
+  "globalCurrencies": "Global Currencies",
+  "cryptocurrencies": "Cryptocurrencies",
+  "preciousMetals": "Precious Metals",
+  "calculator": "Calculator",
+  "favorites": "Favorites",
+  "comparison": "Comparison",
+  "notifications": "Notifications",
+  "language": "Language",
+  "darkMode": "Dark Mode",
+  "arabic": "Arabic",
+  "english": "English"
+}
