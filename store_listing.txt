@@ -1,0 +1,18 @@
+App Name: Financial Markets - الأسواق المالية
+
+Short Description:
+Live global exchange rates, cryptocurrency prices, precious metals, and local bank rates.
+
+Full Description:
+Astra Tech Financial Markets is your all-in-one companion for monitoring the real-time value of money and precious assets. In a world where prices fluctuate every second, our app provides a clean, fast, and reliable way to track exactly what matters to you.
+
+Features:
+• Global Fiat Currencies: Track live exchange rates for USD, EUR, GBP, and dozens of other global currencies.
+• Cryptocurrency Tracking: Monitor the real-time market prices of Bitcoin (BTC), Ethereum (ETH), and other top crypto assets.
+• Precious Metals: Keep an eye on the live valuation of Gold, Silver, Platinum, and Palladium.
+• Local Bank Rates (Egypt): Get the exact buy and sell rates for major local banks directly on your phone.
+• Custom Settings & Dark Mode: Tailor the app to your visual preferences with a native Dark Mode and personalized regional settings.
+
+Built by Astra Tech, this application is designed strictly for informational tracking and market transparency. It is entirely free to use and securely fetches data from reliable global endpoints. 
+
+Stay connected to the real value of money with Astra Tech Financial Markets.
