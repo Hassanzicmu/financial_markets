@@ -5,7 +5,7 @@ import '../models/bank_rate.dart';
 class BankRatesService {
   // Use your computer's local IP address if testing on a physical Android device.
   // For iOS Simulator or macOS, localhost works fine.
-  static const String baseUrl = 'http://192.168.1.4:3000/api/rates';
+  static const String baseUrl = 'https://financial-markets.pages.dev/api/rates';
 
   Future<List<BankRate>> fetchBankRates(String countryCode) async {
     try {
