@@ -1,4 +1,4 @@
-package market.rates.we.aliens.agency
+package net.astratech.financialmarkets
 
 import io.flutter.embedding.android.FlutterActivity
 
