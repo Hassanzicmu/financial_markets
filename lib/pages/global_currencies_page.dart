@@ -3,8 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:intl/intl.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:market_rates/widgets/design_system.dart';
-import 'package:market_rates/theme.dart';
+import 'package:financial_markets/widgets/design_system.dart';
+import '../theme.dart';
+import '../widgets/design_system.dart';
+import 'package:financial_markets/pages/currency_details_page.dart';
 
 class GlobalCurrenciesPage extends StatefulWidget {
   const GlobalCurrenciesPage({super.key});
@@ -343,8 +345,14 @@ class _GlobalCurrenciesPageState extends State<GlobalCurrenciesPage> {
         ),
         Expanded(
           child: ListView.builder(
-            itemCount: filteredEntries.length,
+            itemCount: filteredEntries.length + 1,
             itemBuilder: (context, index) {
+              if (index == filteredEntries.length) {
+                return const Padding(
+                  padding: EdgeInsets.only(top: 16.0),
+                  child: AstraTechFooter(),
+                );
+              }
               final entry = filteredEntries[index];
               final codeLower = entry.key.toLowerCase();
               final code = entry.key.toUpperCase();
@@ -384,7 +392,15 @@ class _GlobalCurrenciesPageState extends State<GlobalCurrenciesPage> {
                 change: '${isPositive ? "+" : ""}${changePercent.toStringAsFixed(2)}%',
                 isUp: isPositive,
                 isFavorite: _favorites.contains(codeLower),
-                onTap: () => _toggleFavorite(codeLower),
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (_) => CurrencyDetailsPage(
+                    title: '$_baseCurrencyLower / $code',
+                    subtitle: name,
+                    currentPrice: rateStr,
+                    priceChange: '${isPositive ? "+" : ""}${changePercent.toStringAsFixed(2)}%',
+                    isUp: isPositive,
+                  )));
+                },
               );
             },
           ),

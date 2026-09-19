@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'pages/home_page.dart';
+import 'package:financial_markets/theme.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -47,7 +48,7 @@ class _SplashScreenState extends State<SplashScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Theme.of(context).colorScheme.primary,
+      backgroundColor: BinanceColors.canvasDark,
       body: Stack(
         children: [
           Center(
@@ -56,7 +57,7 @@ class _SplashScreenState extends State<SplashScreen>
               child: FadeTransition(
                 opacity: _animation,
                 child: Image.asset(
-                  'assets/img/logo.png',
+                  'assets/logo/app-logo-trans.png',
                   width: 200, // adjust width as necessary
                   height: 200,
                 ),
@@ -68,7 +69,7 @@ class _SplashScreenState extends State<SplashScreen>
             child: Padding(
               padding: EdgeInsets.only(bottom: 40.0),
               child: Text(
-                'Owned by WE ALIENS AGENCY',
+                'Owned by ASTRA TECH',
                 style: TextStyle(
                   fontSize: 14,
                   fontWeight: FontWeight.w600,

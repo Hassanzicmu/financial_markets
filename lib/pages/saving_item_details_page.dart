@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:market_rates/widgets/design_system.dart';
-import 'package:market_rates/theme.dart';
+import 'package:financial_markets/widgets/design_system.dart';
+import 'package:financial_markets/theme.dart';
 import '../models/saving_item.dart';
 import '../services/savings_service.dart';
 import 'my_savings_page.dart'; // To reuse _AddHoldingSheet for editing

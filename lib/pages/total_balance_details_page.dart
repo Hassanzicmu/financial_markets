@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:market_rates/widgets/design_system.dart';
-import 'package:market_rates/theme.dart';
+import 'package:financial_markets/widgets/design_system.dart';
+import 'package:financial_markets/theme.dart';
 import '../models/saving_item.dart';
 
 class TotalBalanceDetailsPage extends StatefulWidget {

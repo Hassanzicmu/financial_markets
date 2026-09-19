@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:market_rates/l10n/app_localizations.dart';
+import 'package:financial_markets/l10n/app_localizations.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 
-import 'package:market_rates/widgets/design_system.dart';
-import 'package:market_rates/theme.dart';
+import 'package:financial_markets/widgets/design_system.dart';
+import 'package:financial_markets/theme.dart';
 
 import 'global_currencies_page.dart';
+import 'bank_rates_page.dart';
 import 'cryptocurrencies_page.dart';
 import 'precious_metals_page.dart';
 import 'my_savings_page.dart';
@@ -59,7 +60,7 @@ class _HomePageState extends State<HomePage> {
     return TradingPlatformLayout(
       title: Row(
         children: [
-          Icon(Icons.trending_up, color: context.primary),
+          Image.asset('assets/icon/app-icon-trans.png', width: 28, height: 28),
           const SizedBox(width: 8),
           Text(
             l10n.marketRates,
@@ -89,7 +90,7 @@ class _HomePageState extends State<HomePage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  Icon(Icons.trending_up, color: context.primary, size: 48),
+                  Image.asset('assets/icon/app-icon-trans.png', width: 64, height: 64),
                   const SizedBox(height: 12),
                   Text(
                     l10n.marketRates,
@@ -176,6 +177,15 @@ class _HomePageState extends State<HomePage> {
                     change: "Pairs",
                     isUp: true,
                     onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const GlobalCurrenciesPage())),
+                  ),
+                  MarketsRow(
+                    icon: Icon(Icons.account_balance, color: context.primary),
+                    symbol: l10n.bankRates,
+                    name: l10n.localBanks,
+                    price: "Live",
+                    change: l10n.country,
+                    isUp: true,
+                    onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const BankRatesPage())),
                   ),
                   MarketsRow(
                     icon: Icon(Icons.currency_bitcoin, color: context.primary),

@@ -77,4 +77,16 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get english => 'English';
+
+  @override
+  String get country => 'Country';
+
+  @override
+  String get egypt => 'Egypt';
+
+  @override
+  String get bankRates => 'Bank Rates';
+
+  @override
+  String get localBanks => 'Local Banks';
 }

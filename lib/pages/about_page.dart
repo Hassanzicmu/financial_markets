@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:market_rates/widgets/design_system.dart';
-import 'package:market_rates/theme.dart';
+import 'package:financial_markets/widgets/design_system.dart';
+import 'package:financial_markets/theme.dart';
 
 class AboutPage extends StatelessWidget {
   const AboutPage({super.key});
@@ -97,6 +97,27 @@ class AboutPage extends StatelessWidget {
                     icon: Icons.update,
                     title: 'Instant Updates',
                     description: 'Get the latest market movements as they happen.',
+                  ),
+                  const SizedBox(height: 16),
+                  _buildFeatureItem(
+                    context: context,
+                    icon: Icons.account_balance,
+                    title: 'Live Local Bank Rates',
+                    description: 'Track the exact buy and sell rates of currencies from local banks in real-time.',
+                  ),
+                  const SizedBox(height: 16),
+                  _buildFeatureItem(
+                    context: context,
+                    icon: Icons.show_chart,
+                    title: 'Interactive Details & Charts',
+                    description: 'Analyze any asset with dynamic charts, historical timeframes, and market statistics.',
+                  ),
+                  const SizedBox(height: 16),
+                  _buildFeatureItem(
+                    context: context,
+                    icon: Icons.calculate,
+                    title: 'Savings & Balance Calculator',
+                    description: 'Manage your personal portfolio and instantly calculate your total net worth across multiple assets.',
                   ),
                   const SizedBox(height: 16),
                   _buildFeatureItem(

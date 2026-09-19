@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../theme.dart';
+import '../pages/about_astra_tech_page.dart';
 
 class TradingPlatformLayout extends StatelessWidget {
   final Widget child;
@@ -48,6 +49,37 @@ class TradingPlatformLayout extends StatelessWidget {
       bottomNavigationBar: bottomNavigationBar,
       body: SafeArea(
         child: child,
+      ),
+    );
+  }
+}
+
+class AstraTechFooter extends StatelessWidget {
+  const AstraTechFooter({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (_) => const AboutAstraTechPage()),
+        );
+      },
+      child: Container(
+        width: double.infinity,
+        padding: const EdgeInsets.symmetric(vertical: 16),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(Icons.shield, size: 16, color: context.primary),
+            const SizedBox(width: 8),
+            Text(
+              'Owned by ASTRA TECH',
+              style: AppTypography.button.copyWith(color: context.primary),
+            ),
+          ],
+        ),
       ),
     );
   }

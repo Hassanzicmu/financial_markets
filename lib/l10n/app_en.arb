@@ -25,5 +25,9 @@
   "language": "Language",
   "darkMode": "Dark Mode",
   "arabic": "Arabic",
-  "english": "English"
+  "english": "English",
+  "country": "Country",
+  "egypt": "Egypt",
+  "bankRates": "Bank Rates",
+  "localBanks": "Local Banks"
 }

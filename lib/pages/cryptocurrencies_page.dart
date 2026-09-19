@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:intl/intl.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:market_rates/widgets/design_system.dart';
-import 'package:market_rates/theme.dart';
+import 'package:financial_markets/widgets/design_system.dart';
+import 'package:financial_markets/theme.dart';
 import 'crypto_details_page.dart';
 
 class CryptocurrenciesPage extends StatefulWidget {
@@ -284,8 +284,14 @@ class _CryptocurrenciesPageState extends State<CryptocurrenciesPage> {
         ),
         Expanded(
           child: ListView.builder(
-            itemCount: filtered.length,
+            itemCount: filtered.length + 1,
             itemBuilder: (context, index) {
+              if (index == filtered.length) {
+                return const Padding(
+                  padding: EdgeInsets.only(top: 16.0),
+                  child: AstraTechFooter(),
+                );
+              }
               final asset = filtered[index];
               final symbol = asset['symbol'].toString();
               final name = asset['name'];

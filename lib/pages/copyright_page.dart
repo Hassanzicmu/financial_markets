@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:market_rates/widgets/design_system.dart';
-import 'package:market_rates/theme.dart';
+import 'package:financial_markets/widgets/design_system.dart';
+import 'package:financial_markets/theme.dart';
 
 class CopyrightPage extends StatelessWidget {
   const CopyrightPage({super.key});
@@ -16,14 +16,18 @@ class CopyrightPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            const Icon(
-              Icons.copyright,
-              size: 64,
-              color: BinanceColors.tradingUp,
+            Image.asset(
+              'assets/copyrights/astra-logo.png',
+              height: 80,
+              errorBuilder: (context, error, stackTrace) => const Icon(
+                Icons.copyright,
+                size: 64,
+                color: BinanceColors.tradingUp,
+              ),
             ),
             const SizedBox(height: 24),
             Text(
-              '© 2026 WE ALIENS AGENCY. All rights reserved.',
+              '© 2026 ASTRA TECH Company. All rights reserved.',
               style: AppTypography.titleMd.copyWith(color: context.ink),
               textAlign: TextAlign.center,
             ),
@@ -36,7 +40,7 @@ class CopyrightPage extends StatelessWidget {
                 border: Border.all(color: context.hairline),
               ),
               child: Text(
-                'The Financial Markets mobile application, including its design, interface, graphics, text, data presentation, and software, is the intellectual property of WE ALIENS AGENCY. Unauthorized reproduction, distribution, modification, or use of any part of this app without express written permission from WE ALIENS AGENCY is strictly prohibited.',
+                'The Financial Markets mobile application, including its design, interface, graphics, text, data presentation, and software, is the intellectual property of ASTRA TECH Company. Unauthorized reproduction, distribution, modification, or use of any part of this app without express written permission from ASTRA TECH Company is strictly prohibited.',
                 style: AppTypography.bodyMd.copyWith(color: context.inkMute, height: 1.5),
               ),
             ),
@@ -49,7 +53,7 @@ class CopyrightPage extends StatelessWidget {
                 border: Border.all(color: context.hairline),
               ),
               child: Text(
-                'All market data displayed in the app — including government currency exchange rates, cryptocurrency values, and precious metal prices — are provided for informational purposes only. While we strive to provide accurate and timely information, WE ALIENS AGENCY does not guarantee the completeness, accuracy, or reliability of the data and will not be responsible for any financial decisions made based on the app’s content.',
+                'All market data displayed in the app — including government currency exchange rates, cryptocurrency values, and precious metal prices — are provided for informational purposes only. While we strive to provide accurate and timely information, ASTRA TECH Company does not guarantee the completeness, accuracy, or reliability of the data and will not be responsible for any financial decisions made based on the app’s content.',
                 style: AppTypography.bodyMd.copyWith(color: context.inkMute, height: 1.5),
               ),
             ),
@@ -62,7 +66,7 @@ class CopyrightPage extends StatelessWidget {
             const SizedBox(height: 16),
             ButtonPrimary(
               onPressed: () async {
-                final Uri emailUri = Uri.parse('mailto:support@wealiens.com');
+                final Uri emailUri = Uri.parse('mailto:support@astra-tech.net');
                 if (await canLaunchUrl(emailUri)) {
                   await launchUrl(emailUri);
                 }
@@ -72,7 +76,7 @@ class CopyrightPage extends StatelessWidget {
             const SizedBox(height: 16),
             ButtonSecondary(
               onPressed: () async {
-                final Uri whatsappUri = Uri.parse('https://wa.me/0021113212911');
+                final Uri whatsappUri = Uri.parse('https://wa.me/201033978114');
                 if (await canLaunchUrl(whatsappUri)) {
                   await launchUrl(whatsappUri, mode: LaunchMode.externalApplication);
                 } else {

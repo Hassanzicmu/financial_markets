@@ -9,7 +9,7 @@ class AppLocalizationsAr extends AppLocalizations {
   AppLocalizationsAr([String locale = 'ar']) : super(locale);
 
   @override
-  String get marketRates => 'أسعار السوق';
+  String get marketRates => 'الأسواق المالية';
 
   @override
   String get home => 'الرئيسية';
@@ -30,7 +30,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get support => 'الدعم';
 
   @override
-  String get welcomeTitle => 'مرحباً بك في أسعار السوق';
+  String get welcomeTitle => 'مرحباً بك في الأسواق المالية';
 
   @override
   String get welcomeSubtitle =>
@@ -77,4 +77,16 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get english => 'الإنجليزية';
+
+  @override
+  String get country => 'البلد';
+
+  @override
+  String get egypt => 'مصر';
+
+  @override
+  String get bankRates => 'أسعار البنوك';
+
+  @override
+  String get localBanks => 'بنوك محلية';
 }

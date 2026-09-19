@@ -235,6 +235,30 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'English'**
   String get english;
+
+  /// No description provided for @country.
+  ///
+  /// In en, this message translates to:
+  /// **'Country'**
+  String get country;
+
+  /// No description provided for @egypt.
+  ///
+  /// In en, this message translates to:
+  /// **'Egypt'**
+  String get egypt;
+
+  /// No description provided for @bankRates.
+  ///
+  /// In en, this message translates to:
+  /// **'Bank Rates'**
+  String get bankRates;
+
+  /// No description provided for @localBanks.
+  ///
+  /// In en, this message translates to:
+  /// **'Local Banks'**
+  String get localBanks;
 }
 
 class _AppLocalizationsDelegate

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:market_rates/widgets/design_system.dart';
-import 'package:market_rates/theme.dart';
-import 'package:market_rates/l10n/app_localizations.dart';
+import 'package:financial_markets/widgets/design_system.dart';
+import 'package:financial_markets/theme.dart';
+import 'package:financial_markets/l10n/app_localizations.dart';
 import '../main.dart'; // To access localeNotifier
 
 class SettingsPage extends StatelessWidget {
@@ -54,6 +54,28 @@ class SettingsPage extends StatelessWidget {
                     onChanged: (String? newValue) {
                       if (newValue != null) {
                         localeNotifier.changeLocale(Locale(newValue));
+                      }
+                    },
+                  ),
+                ),
+                Divider(height: 1, color: context.hairline),
+                ListTile(
+                  leading: Icon(Icons.public, color: context.primary),
+                  title: Text(l10n.country, style: AppTypography.bodyMd.copyWith(color: context.ink)),
+                  trailing: DropdownButton<String>(
+                    value: countryNotifier.country,
+                    underline: const SizedBox(),
+                    dropdownColor: context.surfaceCard,
+                    icon: Icon(Icons.arrow_drop_down, color: context.inkMute),
+                    items: [
+                      DropdownMenuItem(
+                        value: 'eg',
+                        child: Text(l10n.egypt, style: AppTypography.bodyMd.copyWith(color: context.ink)),
+                      ),
+                    ],
+                    onChanged: (String? newValue) {
+                      if (newValue != null) {
+                        countryNotifier.changeCountry(newValue);
                       }
                     },
                   ),

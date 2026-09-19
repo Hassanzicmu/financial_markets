@@ -2,8 +2,8 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:intl/intl.dart';
-import 'package:market_rates/widgets/design_system.dart';
-import 'package:market_rates/theme.dart';
+import 'package:financial_markets/widgets/design_system.dart';
+import 'package:financial_markets/theme.dart';
 import 'metal_details_page.dart';
 
 class PreciousMetalsPage extends StatefulWidget {
@@ -265,8 +265,14 @@ class _PreciousMetalsPageState extends State<PreciousMetalsPage> {
         ),
         Expanded(
           child: ListView.builder(
-            itemCount: filteredItems.length,
+            itemCount: filteredItems.length + 1,
             itemBuilder: (context, index) {
+              if (index == filteredItems.length) {
+                return const Padding(
+                  padding: EdgeInsets.only(top: 16.0),
+                  child: AstraTechFooter(),
+                );
+              }
               final item = filteredItems[index];
               final price = item['price'] as double;
 

@@ -1,6 +1,6 @@
 {
-    "name": "market_rates",
-    "short_name": "market_rates",
+    "name": "Financial Markets - الأسواق المالية",
+    "short_name": "Financial Markets - الأسواق المالية",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

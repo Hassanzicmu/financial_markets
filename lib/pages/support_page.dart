@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:market_rates/widgets/design_system.dart';
-import 'package:market_rates/theme.dart';
+import 'package:financial_markets/widgets/design_system.dart';
+import 'package:financial_markets/theme.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class SupportPage extends StatelessWidget {
@@ -34,7 +34,7 @@ class SupportPage extends StatelessWidget {
               const SizedBox(height: 48),
               ButtonPrimary(
                 onPressed: () async {
-                  final Uri emailUri = Uri.parse('mailto:support@wealiens.com');
+                  final Uri emailUri = Uri.parse('mailto:support@astra-tech.net');
                   if (await canLaunchUrl(emailUri)) {
                     await launchUrl(emailUri);
                   }
@@ -44,7 +44,7 @@ class SupportPage extends StatelessWidget {
               const SizedBox(height: 16),
               ButtonSecondary(
                 onPressed: () async {
-                  final Uri whatsappUri = Uri.parse('https://wa.me/0021113212911');
+                  final Uri whatsappUri = Uri.parse('https://wa.me/201033978114');
                   if (await canLaunchUrl(whatsappUri)) {
                     await launchUrl(whatsappUri, mode: LaunchMode.externalApplication);
                   }

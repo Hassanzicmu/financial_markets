@@ -7,7 +7,7 @@
 
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:market_rates/main.dart';
+import 'package:financial_markets/main.dart';
 
 void main() {
   testWidgets('App loads and displays splash screen', (WidgetTester tester) async {
